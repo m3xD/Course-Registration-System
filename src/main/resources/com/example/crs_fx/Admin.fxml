@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crs_fx.AdminController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="421.0" layoutY="180.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="600.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="574.0" prefWidth="218.0" stylesheets="@StudentCSS.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="13.0">
+                           <styleClass>
+                              <String fx:value="white-form" />
+                              <String fx:value="border" />
+                           </styleClass>
+                           <children>
+                              <Button fx:id="addnewCourse_Admin" layoutX="27.0" layoutY="123.0" mnemonicParsing="false" onAction="#setAddnewCourse_Admin" prefHeight="30.0" prefWidth="157.0" styleClass="btn" stylesheets="@StudentCSS.css" text="Add new course" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="36.0" />
+                              <Button fx:id="logoutBnt_Admin" layoutX="16.0" layoutY="530.0" mnemonicParsing="false" onAction="#logOut" prefHeight="30.0" prefWidth="69.0" styleClass="btn" stylesheets="@StudentCSS.css" text="Log out" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="16.0" />
+                              <Label layoutX="19.0" layoutY="24.0" styleClass="tx" stylesheets="@StudentCSS.css" text="HELLO">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nameAdmin" layoutX="19.0" layoutY="54.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Name">
+                                 <font>
+                                    <Font name="Tahoma" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="19.0" layoutY="85.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Login as:">
+                                 <font>
+                                    <Font name="Tahoma" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="adminRole" layoutX="92.0" layoutY="85.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Role">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="courseIDAdmin" layoutX="24.0" layoutY="181.0" />
+                              <TextField fx:id="courseNameAdmin" layoutX="24.0" layoutY="236.0" />
+                              <TextField fx:id="maxQuantityAdmin" layoutX="24.0" layoutY="293.0" />
+                              <TextField fx:id="courseSectionAdmin" layoutX="24.0" layoutY="351.0" />
+                              <TextField fx:id="courseLocationAdmin" layoutX="24.0" layoutY="414.0" />
+                              <Label layoutX="25.0" layoutY="164.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Course ID" />
+                              <Label layoutX="24.0" layoutY="219.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Course name" />
+                              <Label layoutX="25.0" layoutY="270.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Max quantity" />
+                              <Label layoutX="26.0" layoutY="326.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Course Section" />
+                              <Label layoutX="26.0" layoutY="387.0" styleClass="tx" stylesheets="@StudentCSS.css" text="Course location" />
+                              <Button fx:id="deleteCourse_Admin" layoutX="26.0" layoutY="458.0" mnemonicParsing="false" onAction="#setDeleteCourse_Admin" prefHeight="30.0" prefWidth="157.0" styleClass="btn" stylesheets="@StudentCSS.css" text="Delete course" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="574.0" prefWidth="833.0" stylesheets="@StudentCSS.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="13.0">
+                           <styleClass>
+                              <String fx:value="white-form" />
+                              <String fx:value="border" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="adminTableView" layoutX="14.0" layoutY="14.0" prefHeight="547.0" prefWidth="806.0" stylesheets="@StudentCSS.css" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                <columns>
+                                  <TableColumn fx:id="adminCourseID" prefWidth="75.0" text="Course ID" />
+                                  <TableColumn fx:id="adminCourseName" prefWidth="164.0" text="Course name" />
+                                    <TableColumn fx:id="adminMax" prefWidth="120.0" text="Max quantity" />
+                                    <TableColumn fx:id="adminCourseSec" prefWidth="135.0" text="Course section" />
+                                    <TableColumn fx:id="adminCourseLocation" prefWidth="146.0" text="Course location" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

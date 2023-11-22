@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crs_fx.Controller">
+   <children>
+      <BorderPane fx:id="loginForm" prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <AnchorPane prefHeight="400.0" prefWidth="323.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" styleClass="main-form" stylesheets="@design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="11.0" layoutY="124.0" prefHeight="25.0" prefWidth="303.0" text="COURSE REGISTRATION SYSTEM" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="128.0" layoutY="320.0" text="NEW USER" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginCreateAccount" layoutX="98.0" layoutY="342.0" mnemonicParsing="false" onAction="#switchForm" styleClass="btn" stylesheets="@design.css" text="CREATE ACCOUNT" />
+               </children></AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="400.0" prefWidth="277.0" style="-fx-background-color: white;" styleClass="white-form" stylesheets="@design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <FontIcon iconLiteral="ftl-emo-happy" iconSize="30" layoutX="124.0" layoutY="102.0" />
+                  <Label layoutX="47.0" layoutY="125.0" text="WELCOME TO CRS">
+                     <font>
+                        <Font name="Tahoma Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <FontIcon iconLiteral="anto-user" iconSize="20" layoutX="14.0" layoutY="217.0" />
+                  <TextField fx:id="loginUserName" layoutX="46.0" layoutY="195.0" prefHeight="27.0" prefWidth="187.0" promptText="Username" />
+                  <FontIcon iconLiteral="anto-lock" iconSize="20" layoutX="14.0" layoutY="251.0" />
+                  <PasswordField fx:id="loginPassword" layoutX="46.0" layoutY="230.0" prefHeight="0.0" prefWidth="187.0" promptText="Password" />
+                  <Button fx:id="loginBnt" layoutX="111.0" layoutY="289.0" mnemonicParsing="false" onAction="#loginAccount" styleClass="another" stylesheets="@design.css" text="Login" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+      <BorderPane fx:id="regForm" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <right>
+            <AnchorPane prefHeight="400.0" prefWidth="277.0" style="-fx-background-color: white;" styleClass="white-form" stylesheets="@design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <FontIcon iconLiteral="anto-usergroup-add" iconSize="50" layoutX="111.0" layoutY="105.0" />
+                  <Label layoutX="57.0" layoutY="127.0" text="REGISTER USER">
+                     <font>
+                        <Font name="Tahoma Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <FontIcon iconLiteral="anto-user" iconSize="20" layoutX="14.0" layoutY="217.0" />
+                  <TextField fx:id="signUpUserName" layoutX="46.0" layoutY="195.0" prefHeight="27.0" prefWidth="187.0" promptText="Username" />
+                  <FontIcon iconLiteral="anto-lock" iconSize="20" layoutX="14.0" layoutY="251.0" />
+                  <PasswordField fx:id="signUpPassword" layoutX="46.0" layoutY="230.0" prefHeight="0.0" prefWidth="187.0" promptText="Password" />
+                  <Button fx:id="signUpBnt" layoutX="99.0" layoutY="306.0" mnemonicParsing="false" onAction="#registrationAccount" styleClass="another" stylesheets="@design.css" text="Sign Up" />
+                  <TextField fx:id="signUpRole" layoutX="45.0" layoutY="266.0" prefHeight="25.0" prefWidth="189.0" promptText="Role" />
+               </children>
+            </AnchorPane>
+         </right>
+         <left>
+            <AnchorPane prefHeight="400.0" prefWidth="323.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" styleClass="main-form" stylesheets="@design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="11.0" layoutY="124.0" prefHeight="25.0" prefWidth="303.0" text="COURSE REGISTRATION SYSTEM" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="319.0" text="ALREADY HAVE AN ACCOUNT" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="signUpLogin" layoutX="103.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchForm" styleClass="btn" stylesheets="@design.css" text="LOGIN ACCOUNT" />
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>

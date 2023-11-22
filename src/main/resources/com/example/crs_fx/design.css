@@ -1,0 +1,19 @@
+.white-form {
+    --fxbackground-color: white;
+}
+
+.main-form {
+    --fxbackground-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #fff;
+    -fx-border-width: 1px;
+    -fx-text-fill: #fff;
+}
+
+.another {
+    -fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    -fx-text-fill: #fff;
+}
